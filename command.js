@@ -2,7 +2,7 @@
  put /Users/liyin/bi-data-view/dist/index.html /usr/local/nginx/html/index.html
  put /Users/liyin/bi-data-view/dist/static.zip /usr/local/nginx/html/static.zip
 
- put /Users/liyin/bi-data-view/dist.zip  /usr/local/nginx/html/dist.zip
+ put /Users/liyin/star-an/dist.zip  /usr/local/nginx/html/dist.zip
 //put /Users/liyin/test/nginx.conf /etc/nginx/nginx.conf
 //put /Users/liyin/test/nginx.conf /usr/local/nginx/conf/nginx.conf
 //rcp 远端服务器

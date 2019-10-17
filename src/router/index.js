@@ -45,7 +45,7 @@ export const menu = [
 export default new Router({
   routes: [
     {
-      path:'/home',
+      path:'/',
       component: Home,
       children: [
        ...menu

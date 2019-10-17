@@ -1,7 +1,9 @@
 <template>
  <section class='head'>
    <div class='left'>
-    <img src='/static/image/head/logo.png' />
+	   <section style='height: 31px;width: 113px;margin-top: 40px;'>
+		    <img src='/static/image/head/logo.png' />
+	   </section>
    </div>
     <div class='right'>
        <Header style='height: 58px;'></Header>
@@ -13,9 +15,6 @@
          </ul>
        </Content>
        <!-- <Footer> </Footer> -->
-
-
-
    </div>
  </section>
 </template>
@@ -39,6 +38,9 @@
   .left{
     height: 100%;
     width: 280px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
     img{
       height: 100%;
       width: 100%;
