@@ -9,21 +9,22 @@
 		    </CarouselItem>
 		</Carousel>	
 	 </section>
-	  <section class='text'>
-	 	<h3>{{title}}</h3>
+	  <section class='text' style='margin-top: 20px;'>
 	 	<p>{{msg}}</p>
 	 </section>
 	<section class='content'>
 		<ul >
 			<li v-for='(item ,index) in contentArr' >
-				<div class='text-box ' style='margin-bottom: 20px;'>
-					<h4 class='pointer align_center'>{{item.title_top}}</h4>
-					<p v-for= 'item2 in item.msg_top'> {{item2}}</p>
+				<h4 class='pointer align_center'>{{item.title_top}}</h4>
+				<div class='text-box-top' style='margin-bottom: 20px;'>
+					<section>
+						<p v-for= 'item2 in item.msg_top'> {{item2}}</p>
+					</section>
 				</div>
 				<div class='pic-box'>
 					<img :src='item.pic' class='pointer'/>
 				</div>
-				<div class='text-box'>
+				<div class='text-box-bottom'>
 					<h4 class='pointer align_center'>{{item.title_bottom}}</h4>
 					<p v-for= 'item2 in item.msg_bottom'> {{item2}}</p>
 				</div>
@@ -43,7 +44,7 @@
       data () {
         return {
 			value1:0,
-			title:'标题',
+			// title:'标题',
 			msg:'Intelligent lighting control system can optimize energy efficiency and comfort. Whether driving operational cost reduction through energy efficient LED lighting technologies or implementing a smart strategy to achieve advanced LED fixture management capabilities',
 			bannerArr:[
 				{
@@ -61,7 +62,7 @@
 				{   
 					title_top:'About us',
 					msg_top:['At Star-An, we focus on ZigBee lighting control solutions for commercial, industrial, education, healthcare, residential and other market segments.',
-					],
+					'Additionally, Star-An continues to expand its solutions portfolio, including software and services, to supports the advancement of smart buildings and smart cities.'],
 					pic:'/static/image/about/2-1.jpg',
 					link:'',
 					msg_bottom:['Intelligent lighting control system can optimize energy efficiency and comfort. Whether driving operational cost reduction through energy efficient LED lighting technologies or implementing a smart strategy to achieve advanced LED fixture management capabilities. Our goal is to help our clients save energy, time and money by using the most advanced effective lighting solutions for the specific application',
@@ -90,8 +91,7 @@
 					title_top:'Why choose us',
 					title_bottom:'What you would get from us',
 					msg_top:[
-					'We deliver our faith and goals to our clients, energy saving to save the planet, and reduce your running cost through an easier and a cool way',
-					
+					'We deliver our faith and goals to our clients, energy saving to save the planet, and reduce your running cost through an easier and a cool way. Expanded value to our customer by providing superior lighting and controls solutions.',
 					],
 					pic:'/static/image/about/2-3.jpg',
 					link:'',
@@ -115,47 +115,5 @@
     }
 </script>
 <style scoped lang='less'>
-	   .wrap{
-		   padding: 0 8% ;
-	   }
-		section.text{
-			p{
-				color: rgb(99,99,99);
-				text-align: center;
-				font-size: 14px;
-				line-height: 30px;
-			}
-			h3{
-				line-height: 40px;
-				text-align: center;
-			}
-		}
-	
-	.banner-img{
-		/* height: 800px; */
-		width: 100%;
-		img{
-			height: 100%;
-			width: 100%;
-		}
-		
-	}
-	.content{
-		width: 100%;
-		margin-top: 20px;
-		ul {
-			width: 100%;
-			display: flex;
-			justify-content:space-around;
-			flex:1;
-			li{
-			    margin: 0 20px;
-				flex: 1;
-				img{
-					width: 100%;
-					height: 400px;
-				}
-			}
-		}
-	}
+	 @import "./index.less";
 </style>

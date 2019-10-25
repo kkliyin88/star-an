@@ -19,7 +19,15 @@ export const menu = [
    {
      path: '/products',
      component: products,
-     meta: { title: 'products' }
+     meta: { title: 'products' },
+	 children:[
+		 {
+			path: '/products',
+		 },
+		 {
+		    path: '/products',
+		 }
+	 ]
    },
    {
      path: '/applications',

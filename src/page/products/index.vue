@@ -7,23 +7,17 @@
 	<section class='pic'>
 		<ul >
 			<li v-for='item in picArr1' class='pointer'>
-				<div class='img-pic'>
+				<div class='img-pic' @onmouseover.native='changeImg(item)'>
 					<img :src='item.piclink' />
-				</div>
-				<div class='img-text'>
-				   <p>{{item.msg}}</p>
 				</div>
 			</li>
 		</ul>
 	</section>
-	<section class='pic' style='margin-top: 50px;'>
+	<section class='pic' >
 		<ul >
 			<li v-for='item in picArr2' class='pointer'>
-				<div class='img-pic'>
-					<img :src='item.piclink' />
-				</div>
-				<div class='img-text'>
-				    <p>{{item.msg}}</p>
+				<div class='img-pic' >
+					<img :src='item.piclink'  />
 				</div>
 			</li>
 		</ul>
@@ -45,19 +39,18 @@
 					title_1:'About us ',
 					msg_top:[
 					],
-					piclink:'/static/image/Products/2-ZigBee Smart Controller.png',
+					piclink:'/static/image/products/ZigBee-Gateway.png',
 					link:'',
 					msg_bottom:[
-						
 					],
 				},
 				{
-					piclink:'/static/image/Products/2-ZigBee Smart Controller.png',
+					piclink:'/static/image/products/ZigBee-Smart-Controller.png',
 					link:'',
 					msg:'ZigBee Smart Controller'
 				},
 				{
-					piclink:'/static/image/Products/2-ZigBee Smart Controller.png',
+					piclink:'/static/image/products/ZigBee Smart Driver.png',
 					link:'',
 					msg:'ZigBee Smart Driver'
 				},
@@ -65,17 +58,17 @@
 			],
 			picArr2:[
 				{
-					piclink:'/static/image/Products/2-ZigBee Smart Controller.png',
+					piclink:'/static/image/products/ZigBee Sensor.png',
 					link:'',
 					msg:'ZigBee Sensor',
 				},
 				{
-					piclink:'/static/image/Products/2-ZigBee Smart Controller.png',
+					piclink:'/static/image/products/ZigBee Touch Switch.png',
 					link:'',
 					msg:'ZigBee Touch Switch',
 				},
 				{
-					piclink:'/static/image/Products/2-ZigBee Smart Controller.png',
+					piclink:'/static/image/products/ZigBee-Remote-Controller.png',
 					link:'',
 					msg:'ZigBee Remote Controller',
 				},
@@ -86,43 +79,10 @@
       },
 
       methods:{
+		 
       }
     }
 </script>
 <style scoped lang='less'>
-	.wrap{
-		padding:0 8%;
-		background:rgb(245,245,245);
-		.text{
-			padding-top: 50px;
-			padding-bottom: 50px;
-			
-		}
-		p{
-			color: rgb(99,99,99);
-			text-align: center;
-			font-size: 14px;
-			line-height: 30px;
-		}
-		h3{
-			line-height: 40px;
-			text-align: center;
-		}
-		.pic ul{
-			
-			display: flex;
-			justify-content:space-around;
-			flex-direction: row;
-			li{
-				height: 300px;
-				margin: 0 20px;
-				img{
-				 height: 100%;
-			     width: 100%;
-				}
-			}
-		}
-		
-	}
-	
+	@import "./index.less";
 </style>

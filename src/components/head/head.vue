@@ -10,11 +10,16 @@
        <Content style='height: 42px;'>
           <ul class='menu-ul'>
           <li v-for='item in menu1' :key='item.path'>
-            <router-link :to='item.path'>{{item.meta.title}}</router-link>
+            <router-link :to='item.path' >
+				<span>{{item.meta.title}}</span>
+				<!-- <ul v-if>
+					<li></li>
+				</ul> -->
+			</router-link>
            </li>
          </ul>
        </Content>
-       <!-- <Footer> </Footer> -->
+       
    </div>
  </section>
 </template>
