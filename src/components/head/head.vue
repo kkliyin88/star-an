@@ -9,12 +9,9 @@
        <Header style='height: 58px;'></Header>
        <Content style='height: 42px;'>
           <ul class='menu-ul'>
-          <li v-for='item in menu1' :key='item.path'>
+          <li v-for='item in menu' :key='item.path'>
             <router-link :to='item.path' >
 				<span>{{item.meta.title}}</span>
-				<!-- <ul v-if>
-					<li></li>
-				</ul> -->
 			</router-link>
            </li>
          </ul>
@@ -29,7 +26,7 @@
         name: 'Head',
         data () {
             return {
-                menu1:menu,
+                menu:menu,
             }
         },
     }

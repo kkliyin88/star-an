@@ -63,7 +63,7 @@
 					title_top:'About us',
 					msg_top:['At Star-An, we focus on ZigBee lighting control solutions for commercial, industrial, education, healthcare, residential and other market segments.',
 					'Additionally, Star-An continues to expand its solutions portfolio, including software and services, to supports the advancement of smart buildings and smart cities.'],
-					pic:'/static/image/about/2-1.jpg',
+					pic:'/static/image/about/2-1.png',
 					link:'',
 					msg_bottom:['Intelligent lighting control system can optimize energy efficiency and comfort. Whether driving operational cost reduction through energy efficient LED lighting technologies or implementing a smart strategy to achieve advanced LED fixture management capabilities. Our goal is to help our clients save energy, time and money by using the most advanced effective lighting solutions for the specific application',
 					'Additionally, Star-An continues to expand its solutions portfolio, including software and services, to supports the advancement of smart buildings and smart cities'],
@@ -78,7 +78,7 @@
 					'Easy to install and implement',
 					'Easy to maintain',
 					],
-					pic:'/static/image/about/2-2.jpg',
+					pic:'/static/image/about/2-2.png',
 					link:'',
 					msg_bottom:[
 						'Supports large number of 2,500 devices connection',
@@ -93,7 +93,7 @@
 					msg_top:[
 					'We deliver our faith and goals to our clients, energy saving to save the planet, and reduce your running cost through an easier and a cool way. Expanded value to our customer by providing superior lighting and controls solutions.',
 					],
-					pic:'/static/image/about/2-3.jpg',
+					pic:'/static/image/about/2-3.png',
 					link:'',
 					msg_bottom:[
 						'A full proposal including',

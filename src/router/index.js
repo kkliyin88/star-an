@@ -5,6 +5,8 @@ const Home = resolve => require(['@/page/home'], resolve)
 //菜单一
 const about = resolve => require(['@/page/about'], resolve);
 const products = resolve => require(['@/page/products'], resolve);
+const levelOne = resolve => require(['@/page/products/levelOne'], resolve);
+const levelTwo = resolve => require(['@/page/products/levelTwo'], resolve);
 const applications = resolve => require(['@/page/applications'], resolve);
 const services = resolve => require(['@/page/services'], resolve);
 const videos = resolve => require(['@/page/videos'], resolve);
@@ -20,14 +22,17 @@ export const menu = [
      path: '/products',
      component: products,
      meta: { title: 'products' },
-	 children:[
-		 {
-			path: '/products',
-		 },
-		 {
-		    path: '/products',
-		 }
-	 ]
+	
+   },
+   {   
+   	meta: { title: 'levelOne' },
+   	component: levelOne,
+   	path: '/products/levelOne',
+   },
+   {   
+   	meta: { title: 'levelTwo' },
+   	component: levelTwo,
+   	path: '/products/levelTwo',
    },
    {
      path: '/applications',

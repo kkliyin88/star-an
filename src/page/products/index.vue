@@ -7,18 +7,22 @@
 	<section class='pic'>
 		<ul >
 			<li v-for='item in picArr1' class='pointer'>
+				 <router-link :to='item.routerPath'>
 				<div class='img-pic' @onmouseover.native='changeImg(item)'>
 					<img :src='item.piclink' />
 				</div>
+				</router-link>
 			</li>
 		</ul>
 	</section>
 	<section class='pic' >
 		<ul >
 			<li v-for='item in picArr2' class='pointer'>
-				<div class='img-pic' >
-					<img :src='item.piclink'  />
-				</div>
+				 <router-link to='/products/levelOne'>
+					<div class='img-pic' >
+						<img :src='item.piclink'  />
+					</div>
+				</router-link>
 			</li>
 		</ul>
 	</section>
@@ -35,41 +39,42 @@
 			title:'LED Lighting Fixture',
 			msg1:'Intelligent lighting control system can optimize energy efficiency and comfort. Whether driving operational cost reduction through energy efficient LED lighting technologies or implementing a smart strategy to achieve advanced LED fixture management capabilities. Our goal is to help our clients save energy, time and money by using the most advanced effective lighting solutions for the specific application',
 			picArr1:[
-				{   
-					title_1:'About us ',
-					msg_top:[
-					],
-					piclink:'/static/image/products/ZigBee-Gateway.png',
-					link:'',
-					msg_bottom:[
-					],
+				
+				{
+					piclink:'/static/image/products/ZigBee Sensor.png',
+					routerPath:{path:'/products/levelOne',query:{name:'sensor'}},
+					msg:'ZigBee Sensor',
 				},
 				{
 					piclink:'/static/image/products/ZigBee-Smart-Controller.png',
-					link:'',
+					routerPath:{path:'/products/levelOne',query:{name:'controller'}},
 					msg:'ZigBee Smart Controller'
 				},
 				{
 					piclink:'/static/image/products/ZigBee Smart Driver.png',
-					link:'',
+					routerPath:{path:'/products/levelOne',query:{name:'driver'}},
 					msg:'ZigBee Smart Driver'
 				},
 				
 			],
 			picArr2:[
-				{
-					piclink:'/static/image/products/ZigBee Sensor.png',
-					link:'',
-					msg:'ZigBee Sensor',
+				{   
+					title_1:'About us ',
+					msg_top:[
+					],
+					piclink:'/static/image/products/ZigBee-Gateway.png',
+					routerPath:{path:'/products/levelTwo',query:{id:1}},
+					msg:'ZigBee-Gateway'
 				},
+				
 				{
 					piclink:'/static/image/products/ZigBee Touch Switch.png',
-					link:'',
+					routerPath:{path:'/product/levelTwo',query:{id:5}},
 					msg:'ZigBee Touch Switch',
 				},
 				{
 					piclink:'/static/image/products/ZigBee-Remote-Controller.png',
-					link:'',
+					routerPath:{path:'/product/levelTwo',query:{id:6}},
 					msg:'ZigBee Remote Controller',
 				},
 			]
