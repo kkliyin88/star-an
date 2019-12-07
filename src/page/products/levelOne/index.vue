@@ -37,30 +37,30 @@
 			picArr1:[
 				{
 					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:'sensor',id:1}},
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:1}},
 				},
 				{
 					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:'controller',id:2}},
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:2}},
 				},
 				{
 					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:'driver',id:3}},
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:3}},
 				},
 				
 			],
 			picArr2:[
 				{
 					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:'sensor',id:4}},
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:4}},
 				},
 				{
 					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:'controller',id:5}},
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:5}},
 				},
 				{
 					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:'driver',id:6}},
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:6}},
 				},
 				
 			],
@@ -68,8 +68,9 @@
         }
       },
       mounted(){
+		  console.log('router',this.$route.query);
 		   this.operatorData(this.picArr1,1);
-		   this.operatorData(this.picArr2,2)
+		   this.operatorData(this.picArr2,2);
       },
       methods:{
 		 operatorData(arr,i){
