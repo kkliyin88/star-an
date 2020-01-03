@@ -1,8 +1,8 @@
 <template>
   <div class='wrap' >
     <section class='text'>
-		<h3>{{title}}</h3>
-		<p>{{msg1}}</p>
+		<p class='title'>{{title}}</p>
+		<p class='content'>{{msg1}}</p>
 	</section>
 	<section class='pic'>
 		<ul >
@@ -18,7 +18,7 @@
 	<section class='pic' >
 		<ul >
 			<li v-for='item in picArr2' class='pointer'>
-				 <router-link to='/products/levelOne'>
+				 <router-link :to='item.routerPath'>
 					<div class='img-pic' >
 						<img :src='item.piclink'  />
 					</div>
@@ -63,18 +63,18 @@
 					msg_top:[
 					],
 					piclink:'/static/image/products/ZigBee-Gateway.png',
-					routerPath:{path:'/products/levelTwo',query:{id:1}},
+					routerPath:{path:'/products/levelTwo',query:{name:'gateway',id:4}},
 					msg:'ZigBee-Gateway'
 				},
 				
 				{
 					piclink:'/static/image/products/ZigBee Touch Switch.png',
-					routerPath:{path:'/product/levelTwo',query:{id:5}},
+					routerPath:{path:'/products/levelTwo',query:{name:'touch-switch',id:5}},
 					msg:'ZigBee Touch Switch',
 				},
 				{
 					piclink:'/static/image/products/ZigBee-Remote-Controller.png',
-					routerPath:{path:'/product/levelTwo',query:{id:6}},
+					routerPath:{path:'/products/levelTwo',query:{name:'remote-control',id:6}},
 					msg:'ZigBee Remote Controller',
 				},
 			]

@@ -10,28 +10,29 @@
 		</Carousel>	
 	 </section>
 	  <section class='text' style='margin-top: 20px;'>
-	 	<p>{{msg}}</p>
+	 	<p class='content_text'>{{msg}}</p>
 	 </section>
+	 
+	 
 	<section class='content'>
 		<ul >
-			<li v-for='(item ,index) in contentArr' >
-				<h4 class='pointer align_center'>{{item.title_top}}</h4>
-				<div class='text-box-top' style='margin-bottom: 20px;'>
+			<li v-for='(item ,index) in contentArr'>
+				<div class='text-box-top' >
+					<p class='pointer text-box-top-title'>{{item.title_top}}</p>
 					<section>
-						<p v-for= 'item2 in item.msg_top'> {{item2}}</p>
+						<p  class='content_text' v-for= 'item2 in item.msg_top'> {{item2}}</p>
 					</section>
 				</div>
 				<div class='pic-box'>
 					<img :src='item.pic' class='pointer'/>
 				</div>
 				<div class='text-box-bottom'>
-					<h4 class='pointer align_center'>{{item.title_bottom}}</h4>
-					<p v-for= 'item2 in item.msg_bottom'> {{item2}}</p>
+					<p class='pointer title'>{{item.title_bottom}}</p>
+					<p class='content_text' v-for= 'item2 in item.msg_bottom'> {{item2}}</p>
 				</div>
 			</li>
 		</ul> 
 	 </section>
-   
   </div>
 </template>
 <script>
@@ -48,12 +49,12 @@
 			msg:'Intelligent lighting control system can optimize energy efficiency and comfort. Whether driving operational cost reduction through energy efficient LED lighting technologies or implementing a smart strategy to achieve advanced LED fixture management capabilities',
 			bannerArr:[
 				{
-					pic:'/static/image/about/1.jpg',
+					pic:'/static/image/about/1.png',
 					link:'',
 					msg:'图一介绍'
 				},
 				{
-					pic:'/static/image/about/2.jpg',
+					pic:'/static/image/about/2.png',
 					link:'',
 					msg:'图二介绍'
 				},

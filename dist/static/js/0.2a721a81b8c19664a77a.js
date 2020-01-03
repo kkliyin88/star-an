@@ -1,0 +1,2 @@
+webpackJsonp([0],{TbkS:function(t,n,e){"use strict";var o=e("mtWM"),a=e.n(o),c="/apis";function s(t,n,e={}){let o=/\.json$/.test(t);return-1!=t.indexOf("http://")||o||(t=c+t),new Promise(function(o,c){a.a.get(t,n,e).then(t=>{o(t.data)}).catch(t=>{c(t),console.log(t,t)})}).catch(t=>{console.log(t,t)})}n.a=s,a.a.defaults.headers.common.token="afsd20190425"}});
+//# sourceMappingURL=0.2a721a81b8c19664a77a.js.map

@@ -24,7 +24,7 @@
 			           <Panel >
 			                 Features
 							 <div slot="content">
-							 		<p class='content'  v-for="item in content">*  {{item}}</p>					
+							 		<p class='content1'  v-for="item in content">*  {{item}}</p>					
 							 </div>
 			           </Panel>
 			           <Panel >
@@ -55,16 +55,10 @@
 			mainPic:'/static/image/products/levelTwo/',
 			basePath:'/static/image/products/levelTwo/',
 			baseJsPath:'/static/js/products/levelTwo/',
-			textpath:'',
+			imageMsgPath:'',
 			content:[],
-			smallPicArr:
-			[
-				{pic:''},
-				{pic:''},
-				{pic:''},
-				{pic:''},
-				{pic:''},
-			],
+			smallPicArrNum:0,
+			smallPicArr:[],
 			sysPicArr:
 			[
 				{pic:''},
@@ -74,33 +68,40 @@
         }
       },
       mounted(){
-		console.log('router',this.$route.query);
+		console.log(this.$route.query.name,this.$route.query.id)
 		this.operator();
-	  
       },
 
       methods:{
 		  getContent(){
-			  get(this.textpath).then((res)=>{
-				   console.log('type',typeof(res))
-				   console.log('res000',res)
+			 let textpath = this.baseJsPath + this.$route.query.name + '/' + this.$route.query.id  + '/' + 'text.json';
+			  get(textpath).then((res)=>{
 				  this.content = res.arr;
-				  console.log('content',this.content)
+			  })
+		  },
+		  getImageMsg(){
+			  let path = this.basePath + this.$route.query.name + '/' + this.$route.query.id +'/' +'imageMsg.json' 
+			  get(path).then((res)=>{
+				  this.smallPicArrNum = res.picNum;
+				  this.smallPicArr = [];
+				 for(let i=0;i<res.picNum;i++){
+					 this.smallPicArr.push({pic:''})
+				 };
+				 this.smallPicArr.map((item,index)=>{
+					 item.pic = this.basePath + this.$route.query.name + '/' + this.$route.query.id + '/' + (index+1) + '.png'
+				 })
 			  })
 		  },
 		 operator(i){
 			 //组图
+			 this.getImageMsg()
 			 this.mainPic = this.basePath + this.$route.query.name + '/' + this.$route.query.id + '/' +'1.png';
 			 //参数图
 			 this.sysPicArr.map((item,index)=>{
 				 item.pic = this.basePath + this.$route.query.name + '/' + this.$route.query.id +'/' +'sys' + '/' + (index+1) + '.png'
 			 })
 			 //小图
-			 this.smallPicArr.map((item,index)=>{
-				 item.pic = this.basePath + this.$route.query.name + '/' + this.$route.query.id + '/' + (index+1) + '.png'
-			 })
-			 //内容路径
-			this.textpath = this.baseJsPath + this.$route.query.name + '/' + this.$route.query.id  + '/' + 'text.json';
+			 
 			this.getContent();
 		 },
 		 selectPic(i){
