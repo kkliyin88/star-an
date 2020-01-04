@@ -7,7 +7,7 @@
 			   </div>
 			   <div class="small_pic">
 			   		<ul>
-						<li @click='selectPic(index)' v-for="(item,index) in smallPicArr">
+						<li class='pointer' @click='selectPic(index)' v-for="(item,index) in smallPicArr">
 							<img v-if='item.pic' :src='item.pic' />
 						</li>
 					</ul>		   
@@ -68,7 +68,6 @@
         }
       },
       mounted(){
-		console.log(this.$route.query.name,this.$route.query.id)
 		this.operator();
       },
 

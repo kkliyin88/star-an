@@ -16,9 +16,10 @@ Vue.use(iView);
 Vue.config.productionTip = false;
 Vue.prototype.$http = Axios;
 
-// import NProgress from 'nprogress' // Progress 进度条
-// import 'nprogress/nprogress.css'// Progress 进度条样式
+import NProgress from 'nprogress' // Progress 进度条
+import 'nprogress/nprogress.css'// Progress 进度条样式
 // router.beforeEach((to, from, next) => {
+// 	console.log('to',to)
 //   NProgress.start()
 //   const user = localStorage.getItem('lz_userName');
 //   const pass = localStorage.getItem('lz_passNumber');
@@ -29,6 +30,14 @@ Vue.prototype.$http = Axios;
 //        localStorage.setItem('lz_passNumber', pass);
 //        next()
 //    }
+// })
+// console.log('this.$router11',router)
+// router.beforeEach((to, from, next) => {
+// 	console.log('to',to)
+// 	 NProgress.start()
+// 	if(to.path=='/'){
+// 		router.push('/about');
+// 	} 
 // })
 // router.afterEach(() => {
 //   NProgress.done() // 结束Progress

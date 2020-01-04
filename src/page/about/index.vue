@@ -27,7 +27,7 @@
 					<img :src='item.pic' class='pointer'/>
 				</div>
 				<div class='text-box-bottom'>
-					<p class='pointer title'>{{item.title_bottom}}</p>
+					<p class='pointer text-box-bottom-title'>{{item.title_bottom}}</p>
 					<p class='content_text' v-for= 'item2 in item.msg_bottom'> {{item2}}</p>
 				</div>
 			</li>

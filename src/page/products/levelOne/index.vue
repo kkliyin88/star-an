@@ -3,7 +3,7 @@
 	  <div class='container1'>
 		<section class='pic'>
 			<ul >
-				<li v-for='item in picArr1' class='pointer'>
+				<li v-for='item in picArr' class='pointer'>
 					<router-link :to='item.routerPath'>
 					<div class='img-pic' @onmouseover.native='changeImg(item)'>
 						<img :src='item.piclink' />
@@ -12,21 +12,12 @@
 				</li>
 			</ul>
 		</section>
-		<section class='pic'>
-			<ul >
-				<li v-for='item in picArr2' class='pointer'>
-					<router-link :to='item.routerPath'>
-					<div class='img-pic' @onmouseover.native='changeImg(item)'>
-						<img :src='item.piclink' />
-					</div>
-					</router-link>
-				</li>
-			</ul>
-		</section>
+		
 	  </div>
   </div>
 </template>
 <script>
+	import { get } from '@/axios/fetch';
     export default {
       name: 'levelOne',
       components:{
@@ -34,50 +25,30 @@
       },
       data () {
         return {
-			picArr1:[
-				{
-					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:1}},
-				},
-				{
-					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:2}},
-				},
-				{
-					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:3}},
-				},
-				
-			],
-			picArr2:[
-				{
-					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:4}},
-				},
-				{
-					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:5}},
-				},
-				{
-					piclink:'/static/image/products/levelOne/',
-					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:6}},
-				},
-				
-			],
-			
+			picNum:0,
+			picArr:[],
+			basePath:'/static/image/products/levelOne/',
         }
       },
       mounted(){
-		  console.log('router',this.$route.query);
-		   this.operatorData(this.picArr1,1);
-		   this.operatorData(this.picArr2,2);
+		  
+		   this.operatorData();
       },
       methods:{
-		 operatorData(arr,i){
-			 arr.map((item,index)=>{
-				 item.piclink  = item.piclink + this.$route.query.name +'/' +i+'-'+ (index+1)+'.png';
+		 operatorData(){
+			 let path = this.basePath + this.$route.query.name+'/imageMsg.json';
+			 get(path).then((res)=>{
+				  this.picNum = res.picNum;
+				  this.picArr = [];
+				 for(let i=0;i<res.picNum;i++){
+					 this.picArr.push({
+					piclink:this.basePath + this.$route.query.name +'/' + (i+1)+'.png',
+					routerPath:{path:'/products/levelTwo',query:{name:this.$route.query.name,id:i+1}},
+					})
+				 };
+				console.log('picArr',this.picArr)
 			 })
-		 }
+		 } 
       }
     }
 </script>

@@ -71,8 +71,10 @@ export const menu = [
 ]
 export default new Router({
   routes: [
+	{ path: '*', redirect: '/about' },
     {
       path:'/',
+	  redirect:'/about',
       component: Home,
       children: [
        ...menu

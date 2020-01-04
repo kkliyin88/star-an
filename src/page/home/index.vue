@@ -34,7 +34,7 @@
         }
       },
       mounted(){
-
+		console.log('this.$router22',this.$router)
       },
       computed:{
 
