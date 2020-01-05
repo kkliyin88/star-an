@@ -1,12 +1,11 @@
 <template>
 	<section class='foot'>
-		  <br />
+		 
 		<ul class='foot-ul'>
 			<li class='foot-ul-li'>
+				<br />
 			   <p v-for='item in address' style='color:#FFF;'>{{item}}</p>
 			</li>
-			<li class='foot-ul-li'>2</li>
-			<li class='foot-ul-li'>3</li>
 		</ul>
 	</section>
 </template>
@@ -20,7 +19,7 @@
 				'@2019 Copyright Star-An Limited. All rights reserved.',
 				'Office Address:',
 				'B906, Nanfang Building',
-				 'Luofang Rd., Luohu Distri.,',
+				 'Luofang Rd., Luohu Dist.,',
 				 'Shenzhen, China, 518000.',
 				 'Tel: +86 755 82683776',
 				 'Email: info@star-an.com'

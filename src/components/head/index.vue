@@ -6,16 +6,16 @@
 	   </section>
    </div>
     <div class='right'>
-       <Header style='height: 58px;'></Header>
-       <Content style='height: 42px;'>
+       <div style='height: 58px;'></div>
+       <div style='height: 42px;'>
           <ul class='menu-ul'>
           <li v-for='item in menu' :key='item.path'>
-            <router-link :to='item.path' >
-				<span>{{item.meta.title}}</span>
+            <router-link :to='item.path'>
+				<span >{{item.meta.title}}</span>
 			</router-link>
            </li>
          </ul>
-       </Content>
+       </div>
    </div>
  </section>
 </template>
@@ -41,19 +41,18 @@
 <style scoped lang='less'>
 .head{
   background: #FFF;
-  padding: 0 30px;
+  padding: 0 5%;
   display: flex;
   height: 100%;
   z-index: 10000;
   .left{
-    height: 100%;
     width: 280px;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
     img{
-      height: 100%;
-      width: 100%;
+     height: 70px;
+      width: 200px;
     }
   }
   .right{
@@ -63,17 +62,27 @@
       display: flex;
       height: 42px;
       li{
-        border-right: 1px solid #DDD;
+		border-radius: 2px;
         color: #555;
         font-size: 13px;
         a{
           color: #555;
           font-size: 13px;
+		  display: inline-block;
           text-transform: uppercase;
-           padding: 0 15px;
            height: 42px;
           line-height: 42px;
         }
+		span{
+			  padding: 0 15px;
+			   display: inline-block;
+			   height: 30px;
+			   line-height: 30px;
+			   border-right: 1px solid #DDD;
+		}
+		span:hover{
+			border-right:none;
+		}
       }
     }
     li:last-child{
