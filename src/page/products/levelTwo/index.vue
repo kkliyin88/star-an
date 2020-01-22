@@ -36,7 +36,7 @@
 					   <Panel >
 					       Installation
 					      <div slot="content" >
-					      	<p>For installation details, please contact us for spec. for your ref.</p>
+					      	<p>Please contact us for installation details and specifications</p>
 					      </div>
 					   </Panel>
 			       </Collapse>

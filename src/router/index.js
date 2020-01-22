@@ -65,7 +65,7 @@ export const menu = [
    {
      path: '/contcat',
      component: contcat,
-     meta: { title: 'contcats' },
+     meta: { title: 'contacts' },
 	  flag:true,
    },
 ]
