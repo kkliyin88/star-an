@@ -12,8 +12,6 @@
 	  <section class='text' style='margin-top: 20px;'>
 	 	<p class='content_text'>{{msg}}</p>
 	 </section>
-	 
-	 
 	<section class='content'>
 		<ul >
 			<li v-for='(item ,index) in contentArr'>
@@ -36,12 +34,10 @@
   </div>
 </template>
 <script>
-
+    
+	
     export default {
       name: 'about',
-      components:{
-
-      },
       data () {
         return {
 			value1:0,

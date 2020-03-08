@@ -41,7 +41,7 @@
 			picArr1:[
 				
 				{
-					piclink:'/static/image/products/ZigBee Sensor.png',
+					piclink:'/static/image/products/ZigBee-Sensor.png',
 					routerPath:{path:'/products/levelOne',query:{name:'sensor'}},
 					msg:'ZigBee Sensor',
 				},
@@ -51,7 +51,7 @@
 					msg:'ZigBee Smart Controller'
 				},
 				{
-					piclink:'/static/image/products/ZigBee Smart Driver.png',
+					piclink:'/static/image/products/ZigBee-Smart-Driver.png',
 					routerPath:{path:'/products/levelOne',query:{name:'driver'}},
 					msg:'ZigBee Smart Driver'
 				},
@@ -68,7 +68,7 @@
 				},
 				
 				{
-					piclink:'/static/image/products/ZigBee Touch Switch.png',
+					piclink:'/static/image/products/ZigBee-Touch-Switch.png',
 					routerPath:{path:'/products/levelTwo',query:{name:'touch-switch',id:5}},
 					msg:'ZigBee Touch Switch',
 				},
