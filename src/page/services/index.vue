@@ -6,7 +6,7 @@
 	 </section>
 	<section class='pic'>
 		<ul >
-			<li v-for='(item,i) in picArr' class='pointer' @click='goLevelOne(i)'>
+			<li v-for='(item,i) in picArr' >
 				<div class='img-pic' >
 					<img :src='item.piclink' />
 				</div>
@@ -50,7 +50,6 @@
 
       methods:{
 		getImageMsg(){
-		  let path = this.basePath + this.$route.query.name + '/' + this.$route.query.id +'/' +'imageMsg.json' 
 		  get(path).then((res)=>{
 			  this.smallPicArrNum = res.picNum;
 			  this.smallPicArr = [];

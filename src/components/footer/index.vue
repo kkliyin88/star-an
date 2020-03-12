@@ -1,6 +1,5 @@
 <template>
 	<section class='foot'>
-		 
 		<ul class='foot-ul'>
 			<li class='foot-ul-li'>
 				<br />
