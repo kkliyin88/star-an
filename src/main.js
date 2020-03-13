@@ -9,9 +9,11 @@ import Axios from 'axios'
 import 'iview/dist/styles/iview.css';
 import './style/main.css';
 
-import { Carousel,CarouselItem} from 'iview';
+import { Carousel,CarouselItem,Collapse,Panel} from 'iview';
 Vue.component('Carousel', Carousel);
 Vue.component('CarouselItem', CarouselItem);
+Vue.component('Collapse', Collapse);
+Vue.component('Panel', Panel);
 Vue.config.productionTip = false;
 Vue.prototype.$http = Axios;
 
