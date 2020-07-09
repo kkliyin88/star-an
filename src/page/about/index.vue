@@ -4,7 +4,7 @@
 		 <Carousel v-model="value1" loop autoplay :autoplay-speed='4000' >
 		    <CarouselItem v-for='(item,index) in bannerArr' :key='index'>
 		       <div class='banner-img'>
-				   <img :src='item.pic' />
+				   <img :src='item' />
 			   </div>
 		    </CarouselItem>
 		</Carousel>	
@@ -35,7 +35,7 @@
 </template>
 <script>
     
-	
+	import { get } from '@/axios/fetch';
     export default {
       name: 'about',
       data () {
@@ -43,18 +43,7 @@
 			value1:0,
 			// title:'标题',
 			msg:'Intelligent lighting control system can optimize energy efficiency and comfort. Whether driving operational cost reduction through energy efficient LED lighting technologies or implementing a smart strategy to achieve advanced LED fixture management capabilities',
-			bannerArr:[
-				{
-					pic:'/static/image/about/1.png',
-					link:'',
-					msg:'图一介绍'
-				},
-				{
-					pic:'/static/image/about/2.png',
-					link:'',
-					msg:'图二介绍'
-				},
-			],
+			bannerArr:[],
 			contentArr:[
 				{   
 					title_top:'About us',
@@ -101,11 +90,19 @@
 			]
         }
       },
-      mounted(){
-
-      },
-
+	  mounted(){
+		 this.initBanner();
+	  },
       methods:{
+		 initBanner(){
+		  let textPath = '/static/image/about/bannerNum.json'
+		  get(textPath).then((res)=>{
+			this.bannerArr = [];
+			for(let i=1;i<=res.number;i++){
+			this.bannerArr.push(`/static/image/about/${i}.png`) 
+			}
+		  })
+		 }
       }
     }
 </script>

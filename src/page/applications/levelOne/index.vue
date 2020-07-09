@@ -28,7 +28,6 @@
 		 getContent(){
 			 let textPath = '/static/js/applications/levelOne/'+this.$route.query.id+'.json'
 			get(textPath).then((res)=>{
-				console.log('resddd',res)
 			  this.content = res.arr;
 			})
 		 },
