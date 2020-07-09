@@ -97,10 +97,12 @@
 		 initBanner(){
 		  let textPath = '/static/image/about/bannerNum.json'
 		  get(textPath).then((res)=>{
+			  console.log('res',res)
 			this.bannerArr = [];
 			for(let i=1;i<=res.number;i++){
-			this.bannerArr.push(`/static/image/about/${i}.png`) 
+				this.bannerArr.push(`/static/image/about/${i}.png`) 
 			}
+			
 		  })
 		 }
       }
