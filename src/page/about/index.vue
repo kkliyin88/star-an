@@ -1,7 +1,7 @@
 <template>
   <div  class='wrap' >
 	 <section class='banner'>
-		 <Carousel v-model="value1" loop autoplay :autoplay-speed='4000' >
+		 <Carousel v-model="value1" loop autoplay :autoplay-speed='5000' >
 		    <CarouselItem v-for='(item,index) in bannerArr' :key='index'>
 		       <div class='banner-img'>
 				   <img :src='item' />
